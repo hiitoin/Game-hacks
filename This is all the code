@@ -1,0 +1,64 @@
+@echo off
+echo By:hiitoin
+color a
+cls
+echo What is the game you want to hack?
+set /p balls=">"
+cls
+echo Wate for 10 sec to hack %balls%
+pause
+cls
+timeout 10
+:A
+cls
+setlocal enabledelayedexpansion
+chcp 65001 >nul
+echo Hacking %balls%
+echo The Hack Are
+echo 1.AimBot 2.Fly[F] 3.Invincible 4.Ex
+echo 5.clear all your hacks
+echo.
+echo.
+set /p G=">>"
+
+
+if /I %G%== 4 (
+cls
+goto C
+)
+
+if /I %G%== 5 (
+echo it is cleared
+goto A
+)
+
+
+:B
+if %errorlevel%== 0 (
+cls
+echo.
+echo it worked :)
+echo %G% is enable :)
+timeout 5
+goto A
+)
+echo it felled :(
+echo %G% is not working :(
+pause
+exit
+
+:C
+set /p EXX=">>"
+if /I %EXX%== exit (
+goto A
+)
+if /I %EXX%== clear (
+cls
+goto C
+)
+if /I %EXX%== Ex(
+echo that did not work try roblox Ex
+pause
+goto C
+)
+goto C
